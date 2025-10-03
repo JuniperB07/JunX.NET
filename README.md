@@ -18,10 +18,15 @@
 <ul>
   <li>Construct Class - Provide methods that will construct various MySQL Command Strings</li>
     <ul>
-      <li>SelectAllCommand - Generates an SQL SELECT statement that retrieves all columns from a specified table.</li>
-      <li>SelectCommand - Generates an SQL SELECT statement that retrieves the specified column/s from a specified table. An optional WHERE clause is appended if specified.</li>
-      <li>SelectAliasCommand - Generates an SQL SELECT statement that assigns (an) alias(es) to the specified column/s from a specified table. An optional WHERE clause is appended if specified. This method
-        uses the custom struct: SelectAsMetadata to map the column/s to the alias/es</li>
-      <li></li>
+      <li><strong>SelectAllCommand</strong> - Generates an SQL SELECT statement that retrieves all columns from a specified table.</li>
+      <li><strong>SelectCommand</strong> - Generates an SQL SELECT statement that retrieves the specified column/s from a specified table. An optional WHERE clause is appended if specified.</li>
+      <li><strong>SelectAliasCommand</strong> - Generates an SQL SELECT statement that assigns (an) alias(es) to the specified column/s from a specified table. An optional WHERE clause is appended if 
+        specified. This method uses the custom struct: <strong>SelectAsMetadata</strong> to map the column/s to the alias/es</li>
+      <li><strong>SelectAliasOrderByCommand</strong> - Generates an SQL SELECT statement similar to <strong>SelectAliasCommand</strong>. Appends an optional WHERE clause and an ORDER BY clause.
+        This method uses the following custom structs and enums:</li>
+        <ul>
+          <li><strong>SelectAsMetadata</strong> - a custom struct for column-to-alias mapping.</li>
+          <li><strong>MySQLOrderBy</strong> - a custom enum used to specify the ordering direction (ASC or DESC).</li>
+        </ul>
     </ul>
 </ul>
