@@ -121,5 +121,13 @@
         <li><strong>ToString</strong> - Returns the complete SQL Command String terminated with a semicolon.</li>
       </ul>
   </ul>
+  <li><strong>MySQLExecute Class</strong> - An outdated class succeeded by <strong>DBConnect</strong>. All the methods and properties of this class can be found in <strong>DBConnect</strong> as well.</li>
 </ul>
 <strong>JunX.NET8.Utilities</strong>
+<p align="justify">Contains classes that provides various additional functionalities within .NET8.</p>
+<ul>
+  <li><strong>ThisEnum Class</strong> - Provides utility methods for dealing with enum types. Uses parameter T: where T is the enum type to operate on.</li>
+  <ul>
+    <li><strong>ToList</strong> - Returns all member names of the enum type T as a list of strings.</li>
+  </ul>
+</ul>
