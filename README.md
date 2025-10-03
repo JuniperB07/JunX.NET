@@ -95,4 +95,5 @@
     <li><strong>GetColumns</strong> - Retrieves the list of column names from a specified table.</li>
     <li><strong>GenerateEnumFromList</strong> - Generates a C# enum definition from a list of string values that contains column names from a MySQL database table.</li>
   </ul>
+  <li><strong>SQLBuilder Class</strong></li>
 </ul>
