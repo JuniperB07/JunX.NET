@@ -42,5 +42,30 @@
       <li><strong>TruncateCommand</strong> - Generates an SQL TRUNCATE command that targets the specified table.</li>
       <li><strong>AppendOrderBy</strong> - Appends an ORDER BY clause to the specified command string.</li>
     </ul>
-  <li><strong>MySQLDatabase Class</strong></li>
+  <li><strong>MySQLDatabase Class</strong> - Provides additional functionality for manipulating MySQL Databases at the database level. (This Class is unfinished)</li>
+    <ul>
+      <li><strong>DatabaseExists</strong> - Checks whether a specified database exists on the target server using the provided credentials.</li>
+      <li><strong>CreateDatabase</strong> - Creates a new MySQL Database using the specified name, character set (uses the custom enum <strong>MySQLCharsets</strong>), and
+        collation (uses the custom enum <strong>MySQLCollation</strong>) if it does not already exists.</li>
+    </ul>
+  <li><strong>DBConnect Class</strong> - Provides additional functionalities for connecting, querying, and manipulating MySQL Databases.</li>
+    <ul>
+      <li><strong>DBConnect</strong> - Initializes a new instance of the class using the specified connection string or MySql Connection. This sets the internal connection and/or connection string.</li>
+      <li><strong>PROPERTIES</strong></li>
+        <ul>
+          <li><strong>ConnectionString</strong> - Gets/Sets the internal connection string to be used for opening the internal MySQL Connection.</li>
+          <li><strong>Connection</strong> - Exposes the internal MySQL Connection.</li>
+          <li><strong>State</strong> - Gets the current connection state of the internal MySQL Connection.</li>
+          <li><strong>CommandString</strong> - Gets/Sets the SQL Command Text for MySQL Command executions.</li>
+          <li><strong>Reader</strong> - Exposes the internal MySQL Data Reader.</li>
+          <li><strong>Adapter</strong> - Exposes the internal MySQL Data Adapter.</li>
+          <li><string>DataSet</string> - Exposes the internal DataSet.</li>
+          <li><string>HasRows</string> - Indicates whether the internal MySQL Data Reader contains one or more rows.</li>
+          <li><string>Values</string> - Gets the list of string values extracted from the current MySQL Data Reader.</li>
+        </ul>
+      <li><strong>FUNCTIONS</strong></li>
+        <ul>
+          <li></li>
+        </ul>
+    </ul>
 </ul>
