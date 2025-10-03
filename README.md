@@ -8,10 +8,10 @@
 <strong>JunX.NET8.EncryptionService</strong>
 <p align="justify">Provides methods for encrypting and decrypting strings using symmetric AES encryption with a key derived from a passphrase.</p>
 <ul>
-  <li>EncryptionService.EncryptionService(string) - Initializes a new instance of the class using the specified key material.</li>
-  <li>EncryptionService.Encrypt(string) - Encrypts the specified plain string and returns the result as a Base64-encoded string.</li>
-  <li>EncryptionService.Decrypt(string) - Decrypts the specified Base64-encoded string.</li>
-  <li>InvalidTextParameterException - A custom exception. Throws an exception when a string parameter is invalid or does not meet the required criteria.</li>
+  <li><strong>EncryptionService.EncryptionService(string)</strong> - Initializes a new instance of the class using the specified key material.</li>
+  <li><strong>EncryptionService.Encrypt(string)</strong> - Encrypts the specified plain string and returns the result as a Base64-encoded string.</li>
+  <li><strong>EncryptionService.Decrypt(string)</strong> - Decrypts the specified Base64-encoded string.</li>
+  <li><strong>InvalidTextParameterException</strong> - A custom exception. Throws an exception when a string parameter is invalid or does not meet the required criteria.</li>
 </ul>
 <strong>JunX.NET8.MySQL</strong>
 <p align="justify">Contains classes that provides additional functionalities for easier querying and manipulation of MySql Databases.</p>
