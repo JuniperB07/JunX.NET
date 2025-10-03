@@ -466,7 +466,6 @@ namespace JunX.NET8.MySQL
 
             return cmd.ToString();
         }
-
         /// <summary>
         /// Generates a SQL <c>UPDATE</c> statement for one or more columns.
         /// </summary>
