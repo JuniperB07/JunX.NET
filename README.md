@@ -16,7 +16,7 @@
 <strong>JunX.NET8.MySQL</strong>
 <p align="justify">Contains classes that provides additional functionalities for easier querying and manipulation of MySql Databases.</p>
 <ul>
-  <li>Construct Class - Provide methods that will construct various MySQL Command Strings</li>
+  <li><strong>Construct Class</strong> - Provide methods that will construct various MySQL Command Strings</li>
     <ul>
       <li><strong>SelectAllCommand</strong> - Generates an SQL SELECT statement that retrieves all columns from a specified table.</li>
       <li><strong>SelectCommand</strong> - Generates an SQL SELECT statement that retrieves the specified column/s from a specified table. An optional WHERE clause is appended if specified.</li>
@@ -33,5 +33,14 @@
         clause if specified. This method uses the custom enum: <strong>MySQLOrderBy</strong> to specify the ordering direction (ASC or DESC).</li>
       <li><strong>InsertIntoCommand</strong> - Generates an SQL INSERT INTO command that inserts rows to the specified table. This method uses the custom struct: <strong>InsertColumnMetadata</strong>
         to store the column name, its MySQL data type (uses custom enum <strong>MySQLDataType</strong>), and the corresponding value to insert</li>
+      <li><strong>UpdateCommand</strong> - Generates an SQL UPDATE command for one or more columns. An optional but recommended WHERE clause is appended if specified. This method
+        uses the custom struct: <strong>UpdateColumnMetadata</strong> to map out the column to be updated, the column's datatype, and update value.</li>
+      <li><strong>DeleteCommand</strong> - Generates an SQL DELETE command for the specified table. An optional but recommended WHERE clause is appended if specified.</li>
+      <li><strong>InnerJoinCommand</strong> - Generates an SQL SELECT command with an INNER JOIN clause. An optional WHERE clause is appended after the INNER JOIN clause if specified. This
+        method uses the custom struct: <strong>JoinMetadata</strong> to create a fully qualified SQL SELECT clause and is also used for the INNER JOIN ... ON clause.</li>
+      <li><strong>InnerJoinAliasCommand</strong> - This method is similar to the <strong>InnderJoinCommand</strong> method but allows the use of alias.</li>
+      <li><strong>TruncateCommand</strong> - Generates an SQL TRUNCATE command that targets the specified table.</li>
+      <li><strong>AppendOrderBy</strong> - Appends an ORDER BY clause to the specified command string.</li>
     </ul>
+  <li><strong>MySQLDatabase Class</strong></li>
 </ul>
