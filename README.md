@@ -18,6 +18,10 @@
 <ul>
   <li>Construct Class - Provide methods that will construct various MySQL Command Strings</li>
     <ul>
-      <li>SelectAllCommand(string, [string]) - </li>
+      <li>SelectAllCommand - Generates an SQL SELECT statement that retrieves all columns from a specified table.</li>
+      <li>SelectCommand - Generates an SQL SELECT statement that retrieves the specified column/s from a specified table. An optional WHERE clause is appended if specified.</li>
+      <li>SelectAliasCommand - Generates an SQL SELECT statement that assigns (an) alias(es) to the specified column/s from a specified table. An optional WHERE clause is appended if specified. This method
+        uses the custom struct: SelectAsMetadata to map the column/s to the alias/es</li>
+      <li></li>
     </ul>
 </ul>
