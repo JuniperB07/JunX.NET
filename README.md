@@ -131,3 +131,28 @@
     <li><strong>ToList</strong> - Returns all member names of the enum type T as a list of strings.</li>
   </ul>
 </ul>
+<strong>JunX.NET8.WinForms</strong>
+<p align="justify">Contains classes, methods, and structs to provide additional functionalities in manipulating System.Windows.Forms Controls.</p>
+<ul>
+  <li><strong>Forms</strong> - Provides additional functionalities for manipulating System.Windows.Forms Controls.</li>
+  <ul>
+    <li><strong>SetControlEnabled</strong> - Sets the Enabled state of the specified control/s.</li>
+    <li><strong>HasEmptyFields</strong> - Determines whether any control in the specified controls array has an empty Text property.</li>
+    <li><strong>ClearControlText</strong> - Clears the Text property of the specified contorl/s.</li>
+    <li><strong>ClearComboBox</strong> - Removes all items from the specified ComboBox/es</li>
+    <li><strong>FillComboBox</strong> - Fills the specified ComboBox/es with the corresponding string array/list of items.</li>
+    <li><strong>AppendComboBox</strong> - Adds the specified collection of items to the specified ComboBox/es.</li>
+    <li><strong>ClearListBox</strong> - Removes all items from the specified ListBox/es.</li>
+    <li><strong>FillListBox</strong> - Fills the specified ListBox/es with the corresponding specified collection of items.</li>
+    <li><strong>AppendListBox</strong> - Adds the specified collection of items to the specified ListBox/es.</li>
+    <li><strong>SetDateTimePickerMaxDate</strong> - Sets the MaxDate property of the specified DateTimePicker/s.</li>
+    <li><strong>SetDateTimePickerMinDate</strong> - Sets the MinDate property of the specified DateTimePicker/s.</li>
+    <li><strong>ResetDataGridView</strong> - Resets the specified DataGridView/s by clearing the rows and removing the data source.</li>
+    <li><strong>SetDataGridViewDataSet</strong> - Sets the DataSource property of the specified DataGridView/s by binding it to a table of the specified DataSet/s.</li>
+    <li><strong>ControlType Class</strong> - Provides recursive extraction of controls of a specified control type from a container, optionally filtered by prefix. This class uses T where T : Control.</li>
+    <ul>
+      <li><strong>Extract</strong> - Recursively extracts all cotnrols of the specified type from the specified container and it's optionally filtered by name prefix. This method returns a
+        collection of controls of the specified type.</li>
+    </ul>
+  </ul>
+</ul>
