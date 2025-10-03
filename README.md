@@ -95,5 +95,31 @@
     <li><strong>GetColumns</strong> - Retrieves the list of column names from a specified table.</li>
     <li><strong>GenerateEnumFromList</strong> - Generates a C# enum definition from a list of string values that contains column names from a MySQL database table.</li>
   </ul>
-  <li><strong>SQLBuilder Class</strong></li>
+  <li><strong>SQLBuilder Class</strong> - Provides a fluent interface for constructing SQL Command Strings.</li>
+  <ul>
+    <li><strong>SQLSelect Subclass</strong> - Provides a fluent interface for constructing an SQL SELECT command string.</li>
+      <ul>
+        <li><strong>Column</strong> - Appends a column name to the SELECT clause of the SQL query.</li>
+        <li><strong>Columns</strong> - Appends multiple column names to the SELECT clause of the SQL query. This method has 1 overload that uses a custom struct <strong>SelectMetadata</strong>
+          for a fully qualified SELECT command.</li>
+        <li><strong>From</strong> - Appends a FROM clause.</li>
+        <li><strong>Where</strong> - Appends a WHERE clause. This method uses the custom enum <strong>MySQLLogicalOperators</strong> for multiple WHERE conditions.</li>
+        <li><strong>StartGroupedWhere</strong> - Starts a grouped WHERE clause by appending an open-parenthesis "(".</li>
+        <li><strong>EndGroupedWhere</strong> - Ends a grouped WHERE clause by appending a close-parenthesis ")"</li>
+        <li><strong>Distinct</strong> - Begins a SELECT DISTINCT SQL command.</li>
+        <li><strong>As</strong> - Appends an alias clause.</li>
+        <li><strong>OrderBy</strong> - Appends an ORDER BY clause. This method uses the custom enum <strong>MySQLOrderBy</strong> to specify ordering.</li>
+        <li><strong>Min</strong> - Begins a SELECT MIN command.</li>
+        <li><strong>Max</strong> - Begins a SELECT MAX command.</li>
+        <li><strong>Count</strong> - Begins a SELECT COUNT command.</li>
+        <li><strong>Sum</strong> - Begins a SELECT SUM command.</li>
+        <li><strong>Avg</strong> - Begins a SELECT AVG command.</li>
+        <li><strong>InnerJoin</strong> - Appends an INNER JOIN clause. This method uses the custom struct <strong>JoinMetadata</strong>.</li>
+        <li><strong>LeftJoin</strong> - Appends a LEFT JOIN clause. This method uses the custom struct <strong>JoinMetadata</strong>.</li>
+        <li><strong>RightJoin</strong> - Appends a RIGHT JOIN clause. This method uses the custom struct <strong>JoinMetadata</strong>.</li>
+        <li><strong>FullOuterJoin</strong> - Appends a FULL OUTER JOIN clause. This method uses the custom struct <strong>JoinMetadata</strong>.</li>
+        <li><strong>ToString</strong> - Returns the complete SQL Command String terminated with a semicolon.</li>
+      </ul>
+  </ul>
 </ul>
+<strong>JunX.NET8.Utilities</strong>
