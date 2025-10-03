@@ -573,6 +573,13 @@ namespace JunX.NET8.MySQL
             _adapter.SelectCommand = new MySqlCommand(_cmdSTR, _connection);
             _adapter.Fill(_dataset);
         }
+        /// <summary>
+        /// Removes all values from the collection, resetting it to an empty state.
+        /// </summary>
+        public void ClearValues()
+        {
+            _read.Clear();
+        }
         #endregion
 
         #region PRIVATE FUNCTIONS
