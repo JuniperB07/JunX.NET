@@ -56,16 +56,30 @@
           <li><strong>ConnectionString</strong> - Gets/Sets the internal connection string to be used for opening the internal MySQL Connection.</li>
           <li><strong>Connection</strong> - Exposes the internal MySQL Connection.</li>
           <li><strong>State</strong> - Gets the current connection state of the internal MySQL Connection.</li>
-          <li><strong>CommandString</strong> - Gets/Sets the SQL Command Text for MySQL Command executions.</li>
+          <li><strong>CommandString</strong> - Gets/Sets the internal SQL Command Text for MySQL Command executions.</li>
           <li><strong>Reader</strong> - Exposes the internal MySQL Data Reader.</li>
           <li><strong>Adapter</strong> - Exposes the internal MySQL Data Adapter.</li>
           <li><string>DataSet</string> - Exposes the internal DataSet.</li>
           <li><string>HasRows</string> - Indicates whether the internal MySQL Data Reader contains one or more rows.</li>
           <li><string>Values</string> - Gets the list of string values extracted from the current MySQL Data Reader.</li>
         </ul>
-      <li><strong>FUNCTIONS</strong></li>
+      <li><strong>FUNCTIONS/METHODS</strong></li>
         <ul>
-          <li></li>
+          <li><strong>Open</strong> - Opens the internal MySQL Connection if it's not already open.</li>
+          <li><strong>CloseAll</strong> - Closes the internal MySQL Connection and MySQL Data Reader.</li>
+          <li><strong>CloseReader</strong> - Closes the internal MySQL Data Reader.</li>
+          <li><strong>Dispose</strong> - Asynchronously disposes all managed database resources of the current instance.</li>
+          <li><strong>Reset</strong> - Resets the internal MySQL Connection by closing it and opening it again using the current instance's internal connection string.</li>
+          <li><strong>ExecuteReader</strong> - Executes the current internal MySQL Command Text and initializes the internal MySQL Data Reader for result traversal.
+            This method contains 3 overloads, 2 of which uses the custom struct: <strong>ParameterMetadata</strong> for parameterized SQL commands.</li>
+          <li><strong>ExecuteNonQuery</strong> - Executes the current MySQL Command Text that does not return any result set such as INSERT, UPDATE, and DELETE.
+            This method contains 3 overloads, 2 of which uses the custom struct: <strong>ParameterMetadata</strong> for parameterized SQL commands.</li>
+          <li><strong>ExecuteAdapter</strong> - Initalizes the internal MySQL Data Adapter with the current MySQL SELECT command stored in the internal command string using the internal MySQL Connection.
+            This method contains 3 overloads, 2 of which uses the custom struct: <strong>ParameterMetadata</strong> for parameterized SQL commands.</li>
+          <li><strong>ExecuteDataSet</strong> - Executes the current SQL SELECT command stored in the internal command string and fills the internal DataSet with the results.
+            This method contains 3 overloads, 2 of which uses the custom struct: <strong>ParameterMetadata</strong> for parameterized SQL commands.</li>
+          <li><strong>GetValue</strong> - Extracts all fields from the internal MySQL Data Reader and stores it to the internal list of strings.</li>
         </ul>
     </ul>
+  <li><strong>MySQLTables Class</strong> - </li>
 </ul>
