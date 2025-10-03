@@ -1,4 +1,5 @@
 # JunX.NET
+<img src="https://github.com/JuniperB07/JunX.NET" align="right" width="150px" height="150px" /> 
 
 <strong>About This Library</strong>
 <br/>
