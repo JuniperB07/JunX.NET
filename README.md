@@ -28,5 +28,10 @@
           <li><strong>SelectAsMetadata</strong> - a custom struct for column-to-alias mapping.</li>
           <li><strong>MySQLOrderBy</strong> - a custom enum used to specify the ordering direction (ASC or DESC).</li>
         </ul>
+      <li><strong>SelectDistinctCommand</strong> - Generates an SQL SELECT DISTINCT command for the specified column/s.</li>
+      <li><strong>SelectOrderByCommand</strong> - Similar to <strong>SelectCommand</strong> method but with an ORDER BY clause appended. An optional WHERE clause is appended before the ORDER BY
+        clause if specified. This method uses the custom enum: <strong>MySQLOrderBy</strong> to specify the ordering direction (ASC or DESC).</li>
+      <li><strong>InsertIntoCommand</strong> - Generates an SQL INSERT INTO command that inserts rows to the specified table. This method uses the custom struct: <strong>InsertColumnMetadata</strong>
+        to store the column name, its MySQL data type (uses custom enum <strong>MySQLDataType</strong>), and the corresponding value to insert</li>
     </ul>
 </ul>
