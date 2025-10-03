@@ -15,4 +15,9 @@
 </ul>
 <strong>JunX.NET8.MySQL</strong>
 <p align="justify">Contains classes that provides additional functionalities for easier querying and manipulation of MySql Databases.</p>
-
+<ul>
+  <li>Construct Class - Provide methods that will construct various MySQL Command Strings</li>
+    <ul>
+      <li>SelectAllCommand(string, [string]) - </li>
+    </ul>
+</ul>
