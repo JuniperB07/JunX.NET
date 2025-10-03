@@ -81,5 +81,18 @@
           <li><strong>GetValue</strong> - Extracts all fields from the internal MySQL Data Reader and stores it to the internal list of strings.</li>
         </ul>
     </ul>
-  <li><strong>MySQLTables Class</strong> - </li>
+  <li><strong>MySQLTables Class</strong> - Provides additional functionalities for creating and manipulating MySQL Database Tables.</li>
+  <ul>
+    <li><strong>CreateTableCommand</strong> - Generates an MySQL CREATE TABLE command using the provided metadata. This method uses the following custom structs and enums:</li>
+      <ul>
+        <li><strong>ColumnInformation</strong> - Represents metadata for a single column in a MySQL Table Definition. This parameters accepts an array of this struct.</li>
+        <li><strong>AutoIncrement</strong> - Represents auto-increment configuration for a MySQL table column.</li>
+        <li><strong>PrimaryKey</strong> - Represents primary key configuration for a MySQL table column.</li>
+        <li><strong>MySQLEngine</strong> - A custom enum that specifies the available storage engines supported by MySQL for table creation and data management.</li>
+        <li><strong>MySQLCharsets</strong> - A custom enum that defines supported character sets for MySQL database encoding.</li>
+        <li><strong>MySQLCollation</strong> - A custom enum that defines supported MySQL collations for character set comparison and sorting behavior.</li>
+      </ul>
+    <li><strong>GetColumns</strong> - Retrieves the list of column names from a specified table.</li>
+    <li><strong>GenerateEnumFromList</strong> - Generates a C# enum definition from a list of string values that contains column names from a MySQL database table.</li>
+  </ul>
 </ul>
