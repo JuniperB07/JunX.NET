@@ -21,4 +21,32 @@ namespace JunX.NET8.Utilities
             return Enum.GetNames(typeof(T)).ToList();
         }
     }
+
+    /// <summary>
+    /// Provides additional utilities for working with .NET.
+    /// </summary>
+    public static class Utilities
+    {
+        #region PUBLIC FUNCTIONS
+        /// <summary>
+        /// Returns a fallback string if the input is null, empty, or consists only of whitespace.
+        /// </summary>
+        /// <param name="Value">
+        /// The input string to evaluate.
+        /// </param>
+        /// <returns>
+        /// <c>"N/A"</c> if the input is null, empty, or whitespace; otherwise, returns the original string.
+        /// </returns>
+        /// <remarks>
+        /// This method is useful for normalizing display values in reports, logs, or UI elements.
+        /// </remarks>
+        public static string FillEmptyString(string Value)
+        {
+            if (string.IsNullOrWhiteSpace(Value))
+                return "N/A";
+            else
+                return Value;
+        }
+        #endregion
+    }
 }
