@@ -23,7 +23,7 @@ namespace JunX.NET8.Utilities
     }
 
     /// <summary>
-    /// Provides additional utilities for working with .NET.
+    /// Provides additional utilities and functionalities for working with .NET.
     /// </summary>
     public static class Utilities
     {
