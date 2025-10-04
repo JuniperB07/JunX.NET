@@ -5,7 +5,6 @@
 <br/>
 <p align="justify">This library contains multiple namespaces. All of these namespaces are to provide additional functionalities to MySql.Data.MySqlClient for easier MySql Database Querying and Manipulation, additional functionalities for reading enum types, manipulating WinForm Controls, and an Encryption Service that contains functionalities for symmetric encryption.</p>
 <p><strong>NUGET PACKAGE:</strong> <a href="https://www.nuget.org/packages/JunX.NET8">JunX.NET8 NuGet Package</a></p>
-<p><strong>EncryptionService Support App:</strong> <a href="https://github.com/JuniperB07/JunX.NET8-Encryptor-Decryptor">JunX.NET8 Encryptor-Decryptor</a></p>
 <br/>
 <p>The following are the namespaces found in this library as well as a brief description.</p>
 <strong>JunX.NET8.EncryptionService</strong>
@@ -15,6 +14,7 @@
   <li><strong>EncryptionService.Encrypt(string)</strong> - Encrypts the specified plain string and returns the result as a Base64-encoded string.</li>
   <li><strong>EncryptionService.Decrypt(string)</strong> - Decrypts the specified Base64-encoded string.</li>
   <li><strong>InvalidTextParameterException</strong> - A custom exception. Throws an exception when a string parameter is invalid or does not meet the required criteria.</li>
+  <li><strong>EncryptionService Support App:</strong> <a href="https://github.com/JuniperB07/JunX.NET8-Encryptor-Decryptor">JunX.NET8 Encryptor-Decryptor</a></li>
 </ul>
 <strong>JunX.NET8.MySQL</strong>
 <p align="justify">Contains classes that provides additional functionalities for easier querying and manipulation of MySql Databases.</p>
