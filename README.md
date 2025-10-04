@@ -1,5 +1,5 @@
 # JunX.NET
-<img src="JunX.NET8.png" align="right" width="150px" height="150px" /> 
+<img src="JunX.NET8.png" align="right" width="200px" height="200px" /> 
 
 <strong>About This Library</strong>
 <br/>
