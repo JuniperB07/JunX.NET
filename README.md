@@ -1,8 +1,9 @@
 # JunX.NET
+<img src="JunX.NET8.png" align="right" width="200px" height="200px" /> 
 
 <strong>About This Library</strong>
 <br/>
-<p align="justify">This libray contains multiple namespaces. All of these namespaces are to provide additional functionalities to MySql.Data.MySqlClient for easier MySql Database Querying and Manipulation, additional functionalities for reading enum types, manipulating WinForm Controls, and an Encryption Service that contains functionalities for symmetric encryption.</p>
+<p align="justify">This library contains multiple namespaces. All of these namespaces are to provide additional functionalities to MySql.Data.MySqlClient for easier MySql Database Querying and Manipulation, additional functionalities for reading enum types, manipulating WinForm Controls, and an Encryption Service that contains functionalities for symmetric encryption.</p>
 <br/>
 <p>The following are the namespaces found in this library as well as a brief description.</p>
 <strong>JunX.NET8.EncryptionService</strong>
