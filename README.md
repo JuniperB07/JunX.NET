@@ -131,6 +131,10 @@
   <ul>
     <li><strong>ToList</strong> - Returns all member names of the enum type T as a list of strings.</li>
   </ul>
+  <li><strong>Utilities Class</strong> - Provides additional utilities and functionalities for working with .NET.</li>
+  <ul>
+    <li><strong>FillEmptyString</strong> - Returns the fallback string 'N/A' if the input is null, empty, or consists only of whitespaces.</li>
+  </ul>
 </ul>
 <strong>JunX.NET8.WinForms</strong>
 <p align="justify">Contains classes, methods, and structs to provide additional functionalities in manipulating System.Windows.Forms Controls.</p>
@@ -154,6 +158,30 @@
     <ul>
       <li><strong>Extract</strong> - Recursively extracts all cotnrols of the specified type from the specified container and it's optionally filtered by name prefix. This method returns a
         collection of controls of the specified type.</li>
+    </ul>
+  </ul>
+</ul>
+<strong>JunX.NET8.Excel</strong>
+<p align="justify">Provides ComVisible class for use in interaction with Microsoft Excel Workbooks and Worksheets.</p>
+<ul>
+  <li><strong>JunXcel</strong> - Provices .NET functionalities for interacting with Excel workbooks and worksheets. This class is ComVisible with ClassInterfaceType: AutoDual.</li>
+  <ul>
+    <li><strong>Constructor</strong> - Initializes an instance of the class. This class constructor have 3 overloads to initialize the class' internal workshee, and workbook variables.</li>
+    <li><strong>PROPERTIES</strong></li>
+    <ul>
+      <li><strong>Worksheet</strong> - Gets/Sets the worksheet context of this instance.</li>
+      <li><strong>Workbook</strong> - Gets/Sets the workbook context of this instance.</li>
+      <li><strong>FilePath</strong> - Gets/Sets the absolute filepath associated with the instance.</li>
+    </ul>
+    <li><strong>FUNCTIONS/METHODS</strong></li>
+    <ul>
+      <li><strong>LastRow</strong> - Returns the next available row index in the specified column by scanning upward from the bottom.</li>
+      <li><strong>CellValue</strong> - Retrieves the value of a cell at the specified row and column index.</li>
+      <li><strong>RangeValue</strong> - Retrieves the value of the specified Excel range.</li>
+      <li><strong>Exists</strong> - Determines whether a specified value exists in a given column, starting from a specified row index.</li>
+      <li><strong>InsertRow</strong> - Inserts a row of values or a block of values into the current instance's worksheet.</li>
+      <li><strong>UpdateValue</strong> - Updates the value of a specific cell/range in the worksheet.</li>
+      <li><strong>UpdateValues</strong> - Updates the value of multiple ranges in the worksheet.</li>
     </ul>
   </ul>
 </ul>
