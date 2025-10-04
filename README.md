@@ -164,7 +164,7 @@
 <strong>JunX.NET8.Excel</strong>
 <p align="justify">Provides ComVisible class for use in interaction with Microsoft Excel Workbooks and Worksheets.</p>
 <ul>
-  <li><strong>JunXcel</strong> - Provices .NET functionalities for interacting with Excel workbooks and worksheets. This class is ComVisible with ClassInterfaceType: AutoDual.</li>
+  <li><strong>JXcel</strong> - Provices .NET functionalities for interacting with Excel workbooks and worksheets. This class is ComVisible with ClassInterfaceType: AutoDual.</li>
   <ul>
     <li><strong>Constructor</strong> - Initializes an instance of the class. This class constructor have 3 overloads to initialize the class' internal workshee, and workbook variables.</li>
     <li><strong>PROPERTIES</strong></li>
