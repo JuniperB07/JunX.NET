@@ -373,6 +373,29 @@ namespace JunX.NET8.WinForms
                 index++;
             }
         }
+        /// <summary>
+        /// Checks whether any control in the specified collection has a <c>Text</c> value equal to the given string.
+        /// </summary>
+        /// <param name="FormControls">The collection of <see cref="Control"/> objects to evaluate.</param>
+        /// <param name="Value">The string to compare against each control's <c>Text</c> property.</param>
+        /// <returns>
+        /// <c>true</c> if at least one control's <c>Text</c> matches the specified value; otherwise, <c>false</c>.
+        /// </returns>
+        public static bool HasStringValue(IEnumerable<Control> FormControls, string Value)
+        {
+            bool hsv = false;
+
+            foreach(Control ctrl in FormControls)
+            {
+                if(ctrl.Text == Value)
+                {
+                    hsv = true;
+                    break;
+                }
+            }
+
+            return hsv;
+        }
 
 
         /// <summary>
