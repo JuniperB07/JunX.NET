@@ -278,6 +278,25 @@ namespace JunX.NET8.WinForms
                 SetDateTimePickerMinDate(dtp, MinDate);
         }
         /// <summary>
+        /// Sets the value of a specified <see cref="DateTimePicker"/> control to the provided <see cref="DateTime"/>.
+        /// </summary>
+        /// <param name="FormDateTimePicker">The <see cref="DateTimePicker"/> control to update.</param>
+        /// <param name="Value">The <see cref="DateTime"/> value to assign to the control.</param>
+        public static void SetDateTimePickerValue(DateTimePicker FormDateTimePicker, DateTime Value)
+        {
+            FormDateTimePicker.Value = Value;
+        }
+        /// <summary>
+        /// Sets the specified <see cref="DateTime"/> value to each <see cref="DateTimePicker"/> control in the provided collection.
+        /// </summary>
+        /// <param name="FormDateTimePickers">A collection of <see cref="DateTimePicker"/> controls to update.</param>
+        /// <param name="Value">The <see cref="DateTime"/> value to assign to each control.</param>
+        public static void SetDateTimePickerValue(IEnumerable<DateTimePicker> FormDateTimePickers, DateTime Value)
+        {
+            foreach(DateTimePicker dtp in FormDateTimePickers)
+                SetDateTimePickerValue(dtp, Value);
+        }
+        /// <summary>
         /// Resets the specified <see cref="DataGridView"/> by clearing its rows and removing its data source.
         /// </summary>
         /// <param name="FormDataGridView">
