@@ -154,6 +154,7 @@
     <li><strong>AppendListBox</strong> - Adds the specified collection of items to the specified ListBox/es.</li>
     <li><strong>SetDateTimePickerMaxDate</strong> - Sets the MaxDate property of the specified DateTimePicker/s.</li>
     <li><strong>SetDateTimePickerMinDate</strong> - Sets the MinDate property of the specified DateTimePicker/s.</li>
+    <li><strong>SetDateTimePickerValue</strong> - Sets the Value property of the specified DateTimePicker/s.</li>
     <li><strong>ResetDataGridView</strong> - Resets the specified DataGridView/s by clearing the rows and removing the data source.</li>
     <li><strong>SetDataGridViewDataSet</strong> - Sets the DataSource property of the specified DataGridView/s by binding it to a table of the specified DataSet/s.</li>
     <li><strong>ControlType Class</strong> - Provides recursive extraction of controls of a specified control type from a container, optionally filtered by prefix. This class uses T where T : Control.</li>
