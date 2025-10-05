@@ -62,9 +62,9 @@
           <li><strong>CommandString</strong> - Gets/Sets the internal SQL Command Text for MySQL Command executions.</li>
           <li><strong>Reader</strong> - Exposes the internal MySQL Data Reader.</li>
           <li><strong>Adapter</strong> - Exposes the internal MySQL Data Adapter.</li>
-          <li><string>DataSet</string> - Exposes the internal DataSet.</li>
-          <li><string>HasRows</string> - Indicates whether the internal MySQL Data Reader contains one or more rows.</li>
-          <li><string>Values</string> - Gets the list of string values extracted from the current MySQL Data Reader.</li>
+          <li><strong>DataSet</strong> - Exposes the internal DataSet.</li>
+          <li><strong>HasRows</strong> - Indicates whether the internal MySQL Data Reader contains one or more rows.</li>
+          <li><strong>Values</strong> - Gets the list of string values extracted from the current MySQL Data Reader.</li>
         </ul>
       <li><strong>FUNCTIONS/METHODS</strong></li>
         <ul>
