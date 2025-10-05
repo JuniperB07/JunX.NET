@@ -158,7 +158,7 @@
     <li><strong>ResetDataGridView</strong> - Resets the specified DataGridView/s by clearing the rows and removing the data source.</li>
     <li><strong>SetDataGridViewDataSet</strong> - Sets the DataSource property of the specified DataGridView/s by binding it to a table of the specified DataSet/s.</li>
     <li><strong>HasStringValue</strong> - Determines whether the Text property of any of the specified Controls is equal to the specified string value.</li>
-    <li><strong>SetControlVisible</strong> - Sets the Visible property of the specified Control/s.
+    <li><strong>SetControlVisible</strong> - Sets the Visible property of the specified Control/s.</li>
     <li><strong>ControlType Class</strong> - Provides recursive extraction of controls of a specified control type from a container, optionally filtered by prefix. This class uses T where T : Control.</li>
     <ul>
       <li><strong>Extract</strong> - Recursively extracts all cotnrols of the specified type from the specified container and it's optionally filtered by name prefix. This method returns a
