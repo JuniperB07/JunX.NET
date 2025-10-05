@@ -396,6 +396,25 @@ namespace JunX.NET8.WinForms
 
             return hsv;
         }
+        /// <summary>
+        /// Sets the visibility of the specified control.
+        /// </summary>
+        /// <param name="FormControl">The <see cref="Control"/> whose <c>Visible</c> property will be updated.</param>
+        /// <param name="IsVisible"><c>true</c> to make the control visible; <c>false</c> to hide it.</param>
+        public static void SetControlVisible(Control FormControl, bool IsVisible)
+        {
+            FormControl.Visible=IsVisible;
+        }
+        /// <summary>
+        /// Sets the visibility of each control in the specified collection.
+        /// </summary>
+        /// <param name="FormControls">The collection of <see cref="Control"/> objects to update.</param>
+        /// <param name="IsVisible"><c>true</c> to make all controls visible; <c>false</c> to hide them.</param>
+        public static void SetControlVisible(IEnumerable<Control> FormControls, bool IsVisible)
+        {
+            foreach (Control ctrl in FormControls)
+                SetControlVisible(ctrl, IsVisible);
+        }
 
 
         /// <summary>
