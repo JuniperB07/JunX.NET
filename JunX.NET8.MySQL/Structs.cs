@@ -153,6 +153,35 @@ namespace JunX.NET8.MySQL
         }
     }
     /// <summary>
+    /// Represents a metadata token for SQL <c>INSERT</c> operations, pairing an enum-based column with its data type and value.
+    /// </summary>
+    /// <typeparam name="T">An <see cref="Enum"/> type representing SQL column metadata.</typeparam>
+    /// <remarks>
+    /// This struct encapsulates the column name, its corresponding <see cref="MySQLDataType"/>, and the value to be inserted. It is designed for metadata-safe, dynamic SQL generation.
+    /// </remarks>
+    public struct GenericInsertColumnMetadata<T> where T: Enum
+    {
+        public T Column { get; set; }
+        public MySQLDataType DataType { get; set; }
+        public string Value { get; set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GenericInsertColumnMetadata{T}"/> struct using the specified column, data type, and value.
+        /// </summary>
+        /// <param name="ToColumn">The enum value representing the target column for insertion.</param>
+        /// <param name="WithDataType">The SQL data type of the column, defined by <see cref="MySQLDataType"/>.</param>
+        /// <param name="WithValue">The value to be inserted into the specified column.</param>
+        /// <remarks>
+        /// This constructor binds a metadata-safe column name with its type and value for use in dynamic SQL <c>INSERT</c> statements.
+        /// </remarks>
+        public GenericInsertColumnMetadata(T ToColumn, MySQLDataType WithDataType, string WithValue)
+        {
+            Column = ToColumn;
+            DataType = WithDataType;
+            Value = WithValue;
+        }
+    }
+    /// <summary>
     /// Represents metadata for a column to be updated in a SQL table.
     /// </summary>
     public struct UpdateColumnMetadata
@@ -184,6 +213,35 @@ namespace JunX.NET8.MySQL
         }
     }
     /// <summary>
+    /// Represents a metadata token for SQL <c>UPDATE</c> operations, pairing an enum-based column with its data type and updated value.
+    /// </summary>
+    /// <typeparam name="T">An <see cref="Enum"/> type representing SQL column metadata.</typeparam>
+    /// <remarks>
+    /// This struct encapsulates the column name, its corresponding <see cref="MySQLDataType"/>, and the new value to be applied during an update. It is designed for metadata-safe, dynamic SQL generation.
+    /// </remarks>
+    public struct GenericUpdateColumnMetadata<T> where T: Enum
+    {
+        public T Column { get; set; }
+        public MySQLDataType DataType { get; set; }
+        public string Value { get; set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GenericUpdateColumnMetadata{T}"/> struct using the specified column, data type, and value.
+        /// </summary>
+        /// <param name="UpdateColumn">The enum value representing the column to update.</param>
+        /// <param name="WithDataType">The SQL data type of the column, defined by <see cref="MySQLDataType"/>.</param>
+        /// <param name="WithValue">The new value to assign to the specified column.</param>
+        /// <remarks>
+        /// This constructor binds a metadata-safe column name with its type and updated value for use in dynamic SQL <c>UPDATE</c> statements.
+        /// </remarks>
+        public GenericUpdateColumnMetadata(T UpdateColumn,  MySQLDataType WithDataType, string WithValue)
+        {
+            Column = UpdateColumn;
+            DataType = WithDataType;
+            Value = WithValue;
+        }
+    }
+    /// <summary>
     /// Represents metadata for the inner join, including table and column to join on.
     /// </summary>
     public struct JoinMetadata
@@ -210,6 +268,34 @@ namespace JunX.NET8.MySQL
         public JoinMetadata(string FromTable, string SelectColumn, string As = "")
         {
             Table = FromTable;
+            Column = SelectColumn;
+            Alias = As;
+        }
+    }
+    /// <summary>
+    /// Represents a metadata token for SQL join operations, pairing an enum-based column with its inferred table name and optional alias.
+    /// </summary>
+    /// <typeparam name="T">An <see cref="Enum"/> type representing SQL column metadata for a specific table.</typeparam>
+    /// <remarks>
+    /// The <c>Table</c> property is automatically inferred from <c>typeof(T).Name</c>, ensuring metadata-safe table resolution. This struct is designed for use in dynamic SQL <c>JOIN</c> and <c>SELECT</c> clauses where aliasing and table qualification are required.
+    /// </remarks>
+    public struct GenericJoinMetadata<T> where T: Enum
+    {
+        public string Table { get { return typeof(T).Name; } }
+        public T Column { get; set; }
+        public string Alias { get; set; }
+        public string Condition { get { return typeof(T).Name + "." + Column.ToString(); } }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GenericJoinMetadata{T}"/> struct using the specified column and optional alias.
+        /// </summary>
+        /// <param name="SelectColumn">The enum value representing the column to select.</param>
+        /// <param name="As">An optional alias to apply to the selected column. If omitted, no alias is used.</param>
+        /// <remarks>
+        /// The associated table name is inferred from <c>typeof(T).Name</c>, ensuring metadata-safe resolution for SQL join and projection operations.
+        /// </remarks>
+        public GenericJoinMetadata(T SelectColumn, string As="")
+        {
             Column = SelectColumn;
             Alias = As;
         }
@@ -265,6 +351,32 @@ namespace JunX.NET8.MySQL
         /// <param name="ColumnName">The name of the column to select.</param>
         /// <param name="As">The alias to assign to the selected column.</param>
         public SelectAsMetadata(string ColumnName, string As)
+        {
+            Column = ColumnName;
+            Alias = As;
+        }
+    }
+    /// <summary>
+    /// Represents a SQL column selection token composed of an enum-based column name and an optional alias.
+    /// </summary>
+    /// <typeparam name="T">An <see cref="Enum"/> type used to identify the column.</typeparam>
+    /// <remarks>
+    /// This struct is designed for metadata-driven SQL generation, allowing column names to be specified via enum values and optionally aliased for clarity or disambiguation.
+    /// </remarks>
+    public struct GenericSelectAsMetadata<T> where T: Enum
+    {
+        public T Column { get; set; }
+        public string Alias { get; set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GenericSelectAsMetadata{T}"/> struct using the specified column and alias.
+        /// </summary>
+        /// <param name="ColumnName">The enum value representing the column to select.</param>
+        /// <param name="As">The alias to assign to the selected column.</param>
+        /// <remarks>
+        /// This constructor pairs a metadata-safe column name with an optional alias for use in SQL <c>SELECT</c> statements.
+        /// </remarks>
+        public GenericSelectAsMetadata(T ColumnName, string As)
         {
             Column = ColumnName;
             Alias = As;
