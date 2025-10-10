@@ -1,4 +1,5 @@
-﻿using JunX.NET8.MySQL;
+﻿using Google.Protobuf.WellKnownTypes;
+using JunX.NET8.MySQL;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace JunX.NET8.SQLBuilder
     /// <remarks>
     /// This struct is used to associate a column with its SQL alias and generate fully qualified references for query composition.
     /// </remarks>
-    public struct AliasMetadata<T> where T : Enum
+    public struct AliasMetadata<T> where T : System.Enum
     {
         public T Column { get; set; }
         public string Alias { get; set; }
@@ -66,7 +67,27 @@ namespace JunX.NET8.SQLBuilder
         {
             get
             {
-                return Construct.SQLSafeValue(DataTypes, Value);
+                //return JunX.NET8.MySQL.Construct.SQLSafeValue(DataTypes, Value);
+                if (Values != null)
+                    Values = Values.Replace("'", "''");
+
+                switch (DataTypes)
+                {
+                    case MySQLDataType.Char:
+                    case MySQLDataType.VarChar:
+                    case MySQLDataType.TinyText:
+                    case MySQLDataType.Text:
+                    case MySQLDataType.LongText:
+                    case MySQLDataType.MediumText:
+                    case MySQLDataType.Date:
+                    case MySQLDataType.DateTime:
+                    case MySQLDataType.Timestamp:
+                    case MySQLDataType.Time:
+                    case MySQLDataType.Year:
+                        return "'" + Values + "'";
+                    default:
+                        return Values;
+                }
             }
         }
 
@@ -98,7 +119,7 @@ namespace JunX.NET8.SQLBuilder
     /// This struct encapsulates metadata for safe SQL update operations, including the target column, raw value, and its <see cref="MySQLDataType"/>.
     /// The <c>Value</c> property provides a SQL-safe representation via <c>Construct.SQLSafeValue</c>, ensuring proper formatting and escaping.
     /// </remarks>
-    public struct UpdateMetadata<T> where T: Enum
+    public struct UpdateMetadata<T> where T: System.Enum
     {
         private string Values { get; set; }
         private MySQLDataType DataTypes { get; set; }

@@ -18,6 +18,17 @@
 
 	<PropertyGroup>
 		<PackageIcon>JunX.NET8.ico</PackageIcon>
+		<SignAssembly>False</SignAssembly>
+	</PropertyGroup>
+
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <DebugType>embedded</DebugType>
+	</PropertyGroup>
+
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <DebugType>embedded</DebugType>
 	</PropertyGroup>
 
 

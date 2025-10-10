@@ -20,7 +20,7 @@ namespace JunX.NET8.SQLBuilder
     /// </remarks>
     public class SelectCommand<T> where T: Enum
     {
-        private StringBuilder cmd = new StringBuilder();
+        public StringBuilder cmd = new StringBuilder();
         private bool _hasColumns = false;
         private bool _hasWhere = false;
 
